@@ -1,0 +1,8 @@
+<suite name="Suite-1">
+    <test name="Test">
+        <classes>
+            <class name="testscripts.TicketBookingTest"></class>
+            <class name="testscripts.TotalPriceTest"></class>
+        </classes>
+    </test>
+</suite>
