@@ -1,4 +1,4 @@
-package leftOutpatters;
+package leftoutpatterns;
 
 public class SingletonPattern {
     private static SingletonPattern singletonPattern = null;
