@@ -28,6 +28,11 @@
    +-- testng.xml
 ```
 
+- ### Design Patterns used in this project are as follows
+    - Page Object Model 
+    - Factory Design Pattern
+    - [Singleton Design Pattern](https://github.com/AST-LW-TV/designPatterns/blob/main/designPatterns/src/test/java/leftoutpatterns/SingletonPattern.java) - Explicit simple example to understand the concept 
+
 - ### [pages package](https://github.com/AST-LW-TV/designPatterns/tree/main/designPatterns/src/test/java/pages)
     - [HomePage Class](https://github.com/AST-LW-TV/designPatterns/blob/main/designPatterns/src/test/java/pages/HomePage.java) - Home page components.
     - [PaymentPage class](https://github.com/AST-LW-TV/designPatterns/blob/main/designPatterns/src/test/java/pages/PaymentPage.java) - Payment page components.
