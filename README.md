@@ -29,9 +29,9 @@
 ```
 
 - ### Design Patterns used in this project are as follows
-    - Page Object Model 
-    - Factory Design Pattern
-    - [Singleton Design Pattern](https://github.com/AST-LW-TV/designPatterns/blob/main/designPatterns/src/test/java/leftoutpatterns/SingletonPattern.java) - Explicit simple example to understand the concept 
+    - Page Object Model. 
+    - Factory Design Pattern.
+    - [Singleton Design Pattern](https://github.com/AST-LW-TV/designPatterns/blob/main/designPatterns/src/test/java/leftoutpatterns/SingletonPattern.java) - Explicit simple example to understand the concept. 
 
 - ### [pages package](https://github.com/AST-LW-TV/designPatterns/tree/main/designPatterns/src/test/java/pages)
     - [HomePage Class](https://github.com/AST-LW-TV/designPatterns/blob/main/designPatterns/src/test/java/pages/HomePage.java) - Home page components.
@@ -44,8 +44,9 @@
 
 - ### [testscripts package](https://github.com/AST-LW-TV/designPatterns/tree/main/designPatterns/src/test/java/testscripts)
     - [RootTest Class](https://github.com/AST-LW-TV/designPatterns/blob/main/designPatterns/src/test/java/testscripts/RootTest.java) - It is *Base* class used to set up preconditions.
-    - [TicketBookingTest Class](https://github.com/AST-LW-TV/designPatterns/blob/main/designPatterns/src/test/java/testscripts/TicketBookingTest.java) - Test to verify No.Of passengers for the trip.
-    - [TotalPriceTest Class](https://github.com/AST-LW-TV/designPatterns/blob/main/designPatterns/src/test/java/testscripts/TotalPriceTest.java) - Test to verify the total price with actual specified value.
+    - Derived Classes from Root Class      
+      - [TicketBookingTest Class](https://github.com/AST-LW-TV/designPatterns/blob/main/designPatterns/src/test/java/testscripts/TicketBookingTest.java) - Test to verify No.Of passengers for the trip.
+      - [TotalPriceTest Class](https://github.com/AST-LW-TV/designPatterns/blob/main/designPatterns/src/test/java/testscripts/TotalPriceTest.java) - Test to verify the total price with actual specified value.
   
 - To run execute the test cases, use the following command 
 ```
