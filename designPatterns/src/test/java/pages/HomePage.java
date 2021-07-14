@@ -6,74 +6,78 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.WebActions;
 
+// Home page object model
 public class HomePage extends WebActions {
-
     private WebDriver driver;
 
-    public HomePage(WebDriver driver){
+    // page factory initialization
+    public HomePage(WebDriver driver) {
         super();
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id="onetrust-accept-btn-handler")
+    // web elements
+    @FindBy(id = "onetrust-accept-btn-handler")
     private WebElement cookiesButton;
 
-    @FindBy(css="input[id='from.search']")
+    @FindBy(css = "input[id='from.search']")
     private WebElement fromInputElement;
 
-    @FindBy(css="input[id='to.search']")
+    @FindBy(css = "input[id='to.search']")
     private WebElement toInputElement;
 
     @FindBy(css = "input#return")
     private WebElement twoWayReturnElement;
 
-    @FindBy(id="page.journeySearchForm.outbound.title")
+    @FindBy(id = "page.journeySearchForm.outbound.title")
     private WebElement outDateElement;
 
-    @FindBy(xpath="//a[@title='July 16, 2021']")
+    @FindBy(xpath = "//a[@title='July 16, 2021']")
     private WebElement outDate;
 
-    @FindBy(id="page.journeySearchForm.inbound.title")
+    @FindBy(id = "page.journeySearchForm.inbound.title")
     private WebElement returnDateElement;
 
-    @FindBy(xpath="//a[@title='July 18, 2021']")
+    @FindBy(xpath = "//a[@title='July 18, 2021']")
     private WebElement returnDate;
 
-    @FindBy(className="_c5iz1w")
+    @FindBy(className = "_c5iz1w")
     private WebElement numberOfPassengers;
 
-    @FindBy(css="._nsi73u8")
+    @FindBy(css = "._nsi73u8")
     private WebElement submitButtonElement;
 
-    public void clickCookiesButton(){
-        boolean temp=cookiesButton.isDisplayed();
-        if(temp)
+    // actions performed on the web page
+    public void clickCookiesButton() {
+        boolean temp = cookiesButton.isDisplayed();
+        if (temp)
             clickElement(cookiesButton);
     }
 
-    public void enterFromInput(String data){
-        enterInput(fromInputElement,data);
+    public void enterFromInput(String data) {
+        enterInput(fromInputElement, data);
     }
 
-    public void enterToInput(String data){
-        enterInput(toInputElement,data);
+    public void enterToInput(String data) {
+        enterInput(toInputElement, data);
     }
 
-    public void clickTypeOfTravel(){
+    public void clickTypeOfTravel() {
         clickElement(twoWayReturnElement);
     }
 
-    public void selectOutDate(){
+    public void selectOutDate() {
         clickElement(outDateElement);
         clickElement(outDate);
     }
 
-    public void selectReturnData(){
+    public void selectReturnData() {
         clickElement(returnDateElement);
         clickElement(returnDate);
     }
 
-    public String enteringEssentialDetails(){
+    // enters the details in the form and returns number of passengers for the following trip
+    public String enteringEssentialDetails() {
         String totalPassengers;
         clickCookiesButton();
         enterFromInput("London");
@@ -81,9 +85,8 @@ public class HomePage extends WebActions {
         clickTypeOfTravel();
         selectOutDate();
         selectReturnData();
-        totalPassengers=getElementText(numberOfPassengers);
+        totalPassengers = getElementText(numberOfPassengers);
         clickElement(submitButtonElement);
         return totalPassengers;
     }
-
 }
